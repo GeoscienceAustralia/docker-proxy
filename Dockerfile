@@ -1,5 +1,8 @@
-FROM silarsis/base
+FROM ubuntu
+#FROM silarsis/base
 MAINTAINER Kevin Littlejohn <kevin@littlejohn.id.au>
+ENV http_proxy=http://pc-64735.prod.lan:3128 https_proxy=http://pc-64735.prod.lan:3128
+
 RUN apt-get -yq update
 
 RUN apt-get -yq install squid iptables
